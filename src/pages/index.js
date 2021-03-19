@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
 
 function PageIndex() {
   const classes = useStyles();
-
   return (
     <Fragment>
       <Head>
