@@ -10,15 +10,8 @@ import {
   Button,
 } from "@material-ui/core";
 import { PhotoCamera } from "@material-ui/icons";
-import { makeStyles } from "@material-ui/core/styles";
 import NextMuiLink from "../components/next-mui-link";
-
-const useStyles = makeStyles((theme) => ({
-  container: {
-    backgroundColor: theme.palette.background.paper,
-    padding: theme.spacing(8, 0, 6),
-  },
-}));
+import useStyles from "../assets/styles/use-styles";
 
 function PageIndex() {
   const classes = useStyles();
@@ -35,7 +28,9 @@ function PageIndex() {
         <AppBar position="relative" color="primary">
           <Toolbar>
             <PhotoCamera />
-            <Typography variant="h6">Photo Album</Typography>
+            <Typography variant="h6" color="inherit" noWrap>
+              Photo Album
+            </Typography>
           </Toolbar>
         </AppBar>
         <main>
@@ -47,7 +42,7 @@ function PageIndex() {
                 color="textPrimary"
                 gutterBottom
               >
-                Photo Album
+                About Page
               </Typography>
 
               <Typography
@@ -56,7 +51,7 @@ function PageIndex() {
                 color="textSecondary"
                 paragraph
               >
-                Hello everyone, this is a photo album and I am trying to make
+                Hello everyone, this is an about page and I am trying to make
                 this sentence as something short and leading about the
                 collection below.
                 <br />
@@ -67,14 +62,9 @@ function PageIndex() {
               <div>
                 <Grid container spacing={2} justify="center">
                   <Grid item>
-                    <Button variant="contained" color="primary">
-                      See my Photos
-                    </Button>
-                  </Grid>
-                  <Grid item>
-                    <NextMuiLink href="/about" color="initial" underline="none">
-                      <Button variant="outlined" color="primary">
-                        About Page
+                    <NextMuiLink href="/" color="initial" underline="none">
+                      <Button variant="contained" color="primary">
+                        Back to Home Page
                       </Button>
                     </NextMuiLink>
                   </Grid>
