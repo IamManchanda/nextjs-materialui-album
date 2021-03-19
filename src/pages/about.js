@@ -33,7 +33,7 @@ function PageIndex() {
   return (
     <Fragment>
       <Head>
-        <title>About | Next.js MaterialUI (Photo) Album</title>
+        <title>About | Next.js MaterialUI Photo Album</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 

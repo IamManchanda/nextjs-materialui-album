@@ -1,1 +1,1 @@
-# Next.js MaterialUI (Photo) Album
+# Next.js MaterialUI Photo Album
