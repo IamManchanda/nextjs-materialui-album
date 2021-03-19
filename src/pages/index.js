@@ -7,12 +7,12 @@ import {
   Grid,
   Button,
 } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
 import NextMuiLink from "../components/next-mui-link";
 import NavAppBar from "../components/nav-app-bar";
+import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
-  container: {
+  homeContainer: {
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
   },
@@ -32,7 +32,7 @@ function PageIndex() {
         <CssBaseline />
         <NavAppBar />
         <main>
-          <div className={classes.container}>
+          <div className={classes.homeContainer}>
             <Container maxWidth="sm">
               <Typography
                 variant="h2"

@@ -9,7 +9,14 @@ import {
 } from "@material-ui/core";
 import NextMuiLink from "../components/next-mui-link";
 import NavAppBar from "../components/nav-app-bar";
-import useStyles from "../assets/styles/use-styles";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles((theme) => ({
+  aboutContainer: {
+    backgroundColor: theme.palette.background.paper,
+    padding: theme.spacing(8, 0, 6),
+  },
+}));
 
 function PageIndex() {
   const classes = useStyles();
@@ -25,7 +32,7 @@ function PageIndex() {
         <CssBaseline />
         <NavAppBar />
         <main>
-          <div className={classes.container}>
+          <div className={classes.aboutContainer}>
             <Container maxWidth="sm">
               <Typography
                 variant="h2"
