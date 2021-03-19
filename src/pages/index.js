@@ -6,9 +6,14 @@ import {
   Container,
   Grid,
   Button,
+  Card,
+  CardMedia,
+  CardContent,
+  CardActions,
 } from "@material-ui/core";
 import NextMuiLink from "../components/next-mui-link";
 import NavAppBar from "../components/nav-app-bar";
+import NavFooter from "../components/nav-footer";
 import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
@@ -19,10 +24,28 @@ const useStyles = makeStyles((theme) => ({
   homeButtons: {
     marginTop: theme.spacing(4),
   },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+  cardMedia: {
+    paddingTop: "56.25%", // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
 }));
+
+const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function PageIndex() {
   const classes = useStyles();
+
   return (
     <Fragment>
       <Head>
@@ -77,7 +100,40 @@ function PageIndex() {
               </div>
             </Container>
           </div>
+          <Container className={classes.cardGrid} maxWidth="md">
+            <Grid container spacing={4}>
+              {cards.map((card) => (
+                <Grid item key={card} xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                      className={classes.cardMedia}
+                      title={`Image title ${card}`}
+                      image="https://source.unsplash.com/random/400x225"
+                    />
+                    <CardContent className={classes.cardContent}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Heading {card}
+                      </Typography>
+                      <Typography>
+                        This is a media card. You can use this section to
+                        describe the content.
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small" color="primary">
+                        View
+                      </Button>
+                      <Button size="small" color="primary">
+                        Edit
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
+          </Container>
         </main>
+        <NavFooter />
       </Fragment>
     </Fragment>
   );
