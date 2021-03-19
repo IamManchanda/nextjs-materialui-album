@@ -19,7 +19,7 @@ function PageIndex() {
   return (
     <Fragment>
       <Head>
-        <title>Next.js MaterialUI (Photo) Album</title>
+        <title>About | Next.js MaterialUI (Photo) Album</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
@@ -51,13 +51,7 @@ function PageIndex() {
                 color="textSecondary"
                 paragraph
               >
-                Hello everyone, this is an about page and I am trying to make
-                this sentence as something short and leading about the
-                collection below.
-                <br />
-                <br />
-                Trying to make it short and sweet, but not too short so folks
-                don&apos;t simply skip over it entirely.
+                Hello everyone, this is an about page!
               </Typography>
               <div>
                 <Grid container spacing={2} justify="center">
