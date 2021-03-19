@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
   },
+  aboutButtons: {
+    marginTop: theme.spacing(4),
+  },
 }));
 
 function PageIndex() {
@@ -50,7 +53,7 @@ function PageIndex() {
               >
                 Hello everyone, this is an about page!
               </Typography>
-              <div>
+              <div className={classes.aboutButtons}>
                 <Grid container spacing={2} justify="center">
                   <Grid item>
                     <NextMuiLink href="/" color="initial" underline="none">

@@ -16,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     padding: theme.spacing(8, 0, 6),
   },
+  homeButtons: {
+    marginTop: theme.spacing(4),
+  },
 }));
 
 function PageIndex() {
@@ -56,7 +59,7 @@ function PageIndex() {
                 Trying to make it short and sweet, but not too short so folks
                 don&apos;t simply skip over it entirely.
               </Typography>
-              <div>
+              <div className={classes.homeButtons}>
                 <Grid container spacing={2} justify="center">
                   <Grid item>
                     <Button variant="contained" color="primary">
