@@ -2,16 +2,14 @@ import { Fragment } from "react";
 import Head from "next/head";
 import {
   CssBaseline,
-  AppBar,
-  Toolbar,
   Typography,
   Container,
   Grid,
   Button,
 } from "@material-ui/core";
-import { PhotoCamera } from "@material-ui/icons";
 import { makeStyles } from "@material-ui/core/styles";
 import NextMuiLink from "../components/next-mui-link";
+import NavAppBar from "../components/nav-app-bar";
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -32,12 +30,7 @@ function PageIndex() {
 
       <Fragment>
         <CssBaseline />
-        <AppBar position="relative" color="primary">
-          <Toolbar>
-            <PhotoCamera />
-            <Typography variant="h6">Photo Album</Typography>
-          </Toolbar>
-        </AppBar>
+        <NavAppBar />
         <main>
           <div className={classes.container}>
             <Container maxWidth="sm">
